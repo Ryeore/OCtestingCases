@@ -1,3 +1,5 @@
+Run the tests by using <code>pytest</code> command in main directory
+
 Automation tests for Opera Cashback website (https://cashback.opera.com)
 
 Tech stack
