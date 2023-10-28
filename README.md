@@ -9,7 +9,7 @@ Tech stack
 
 Test Cases:
 
-1. Login form
+1. Login form -- ~5h
 2. Activating offer (requires being logged in)
 3. Changing country in header dropdown and checking visibility of shops on homepage
 4. Going to Shop page from search in header (exemplary URL of Shop page: https://cashback.opera.com/pl/shops/allegro)
