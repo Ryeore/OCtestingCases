@@ -2,10 +2,15 @@ import pytest
 from selenium import webdriver
 import os
 from selenium.webdriver.chrome import service
+import time
+import warnings
 
 
-@pytest.fixture
+@pytest.fixture(scope="session")
 def browser():
+    #disable DeprecationWarning
+    warnings.filterwarnings("ignore", category=DeprecationWarning)
+
     # set up the path to operadriver executable
     webdriver_service = service.Service(os.path.abspath("driver/operadriver.exe"))
     webdriver_service.start()
@@ -20,7 +25,9 @@ def browser():
     starting_page = "https://cashback.opera.com/pl/en"
     driver.get(starting_page)
     driver.maximize_window()
+    time.sleep(1)
+
     yield driver  # Provide the WebDriver instance to the test
 
-    # Cleanup: Quit the browser after the test is done
     driver.quit()
+

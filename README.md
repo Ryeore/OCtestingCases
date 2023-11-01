@@ -1,5 +1,3 @@
-Run the tests by using <code>pytest</code> command in main directory
-
 Automation tests for Opera Cashback website (https://cashback.opera.com)
 
 Tech stack
@@ -9,14 +7,19 @@ Tech stack
 
 Test Cases:
 
-1. Login form -- ~5h
-2. Activating offer (requires being logged in)
-3. Changing country in header dropdown and checking visibility of shops on homepage
-4. Going to Shop page from search in header (exemplary URL of Shop page: https://cashback.opera.com/pl/shops/allegro)
+1. Changing country in header dropdown and checking visibility of shops on homepage
+2. Login Form
+3. Going to Shop page from search in header (exemplary URL of Shop page: https://cashback.opera.com/pl/shops/allegro)
+4. Activating offer (requires being logged in)
 
-Required packages to install.
-- Pytest
-- Selenium
+Required packages to install. 
+- pip install pytest
+- pip install selenium
+- pip install opencv-python
+- pip install numpy
+- pip install Pillow
+
+Or just use <code>pip install -r requirements.txt</code>
 
 Opera versions used:
 - Opera One (version: 104.0.4944.33)
