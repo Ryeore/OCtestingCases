@@ -20,6 +20,9 @@
   
 Or just use <code>pip install -r requirements.txt</code>
 
+**Running testing suite**
+Execute <code>pytest</code> in the main directory
+
 **Opera versions used:**
 - Opera One (version: 104.0.4944.33)
 - [Operachromiumdriver](https://github.com/operasoftware/operachromiumdriver/releases/tag/v.118.0.5993.89)
