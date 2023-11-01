@@ -1,3 +1,4 @@
+import logging
 from selenium.webdriver import Keys
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
@@ -15,7 +16,7 @@ def test_offer(browser):
             )
             return found_elem
         except NoSuchElementException:
-            print(f"{elem} was not found")
+            logging.info(f"{elem} was not found")
 
     page_elements = {
         "search_bar": (By.XPATH, "//input[@placeholder='Search for a shop...']")

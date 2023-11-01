@@ -1,4 +1,5 @@
 import pytest
+import logging
 from selenium import webdriver
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
@@ -15,7 +16,7 @@ def test_change_country(browser):
             )
             return found_elem
         except NoSuchElementException:
-            print(f"{elem} was not found")
+            logging.info(f"{elem} was not found")
 
     def language_change(location, country):
         try:
@@ -23,7 +24,7 @@ def test_change_country(browser):
             WebDriverWait(browser, 10).until(
                 EC.element_to_be_clickable((By.XPATH, f"//span[text()='{country}']"))).click()
         except:
-            print(f"{country} not found")
+            logging.info(f"{country} not found")
 
     page_elements = {
         "country_dropdown": (By.CLASS_NAME, "sdS6jS0QJPKuLdPv_jy1"),

@@ -1,4 +1,5 @@
 import pytest
+import logging
 from selenium import webdriver
 from credentials import credentials
 from selenium.webdriver.support.wait import WebDriverWait
@@ -16,7 +17,7 @@ def test_login_form(browser):
             )
             return found_elem
         except NoSuchElementException:
-            print(f"{elem} was not found")
+            logging.info(f"{elem} was not found")
 
     page_elements = {
         "login_button": (By.XPATH, "//span[@class='button']"),

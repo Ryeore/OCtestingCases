@@ -1,5 +1,6 @@
 import numpy as np
 import pytest
+import logging
 from selenium import webdriver
 from credentials import credentials
 from selenium.webdriver.support.wait import WebDriverWait
@@ -47,7 +48,7 @@ def test_cashback(browser):
             )
             return found_elem
         except NoSuchElementException:
-            print(f"{elem} was not found")
+            logging.info(f"{elem} was not found")
 
     page_elements = {
         "cashback_option": (By.XPATH, "//a[@id='675bf072-3ae7-42f5-ad5a-1adcad65b508']"),
