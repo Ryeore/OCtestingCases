@@ -21,6 +21,7 @@
 Or just use <code>pip install -r requirements.txt</code>
 
 **Running testing suite**
+
 Execute <code>pytest</code> in the main directory
 
 **Opera versions used:**
