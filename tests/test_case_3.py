@@ -19,9 +19,12 @@ def test_offer(browser):
             logging.info(f"{elem} was not found")
 
     page_elements = {
-        "search_bar": (By.XPATH, "//input[@placeholder='Search for a shop...']"),
-        "shop_name": (By.XPATH, "//h1[@class='uFOHmfzloPqKBpMp52yB stats-button-login']")
+        "search_bar": (By.XPATH, "//header/div[1]/div[2]/div[4]/input[1]"),
+        "shop_name": (By.TAG_NAME, "h1")
     }
+
+    starting_page = "https://cashback.opera.com/pl/en"
+    browser.get(starting_page)
 
     search_shop = element_locator(page_elements["search_bar"])
     ActionChains(browser).send_keys_to_element(search_shop, "allegro").send_keys(Keys.ENTER).perform()
