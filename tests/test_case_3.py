@@ -1,5 +1,5 @@
 import logging
-from selenium.webdriver import Keys
+from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
@@ -19,13 +19,14 @@ def test_offer(browser):
             logging.info(f"{elem} was not found")
 
     page_elements = {
-        "search_bar": (By.XPATH, "//input[@placeholder='Search for a shop...']")
+        "search_bar": (By.XPATH, "//input[@placeholder='Search for a shop...']"),
+        "shop_name": (By.XPATH, "//h1[@class='uFOHmfzloPqKBpMp52yB stats-button-login']")
     }
 
     search_shop = element_locator(page_elements["search_bar"])
     ActionChains(browser).send_keys_to_element(search_shop, "allegro").send_keys(Keys.ENTER).perform()
 
-    if browser.find_element(By.XPATH, "//h1[@class='uFOHmfzloPqKBpMp52yB stats-button-login']").text == "Allegro":
+    if element_locator(page_elements["shop_name"]).text == "Allegro":
         assert True
     else:
         assert False
