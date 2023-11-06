@@ -30,3 +30,8 @@ Execute <code>pytest</code> in the main directory
 
 **Usefull documentation sources:**
 - [Opera Chromedriver Setup with Selenium](https://github.com/operasoftware/operachromiumdriver/blob/master/examples/desktop_selenium_4.x.py)
+
+
+**TODO**
+- seems like used browser extension ChroPath works better on Chrome than Opera - provides better elements location paths
+- testcase of activating offer supported with image recognition - maybe Chrome version would work better
