@@ -1,4 +1,4 @@
-# Automation tests for [Opera Cashback](https://cashback.opera.com) website
+# Automation tests for [Opera Cashback](https://cashback.opera.com) website - Selenium training
 
 **Tech stack**
 1. Python
